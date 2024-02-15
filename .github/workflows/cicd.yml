@@ -27,4 +27,4 @@ jobs:
       - name: Delete old container
         run: docker rm -f sociopedia-server-container
       - name: Run Docker Container
-        run: docker run -d -p 443:443 --name sociopedia-server-container -e MONGO_URL='${{ secrets.MONGO_URL }}' fathismael93/sociopedia-server
+        run: docker run -d -p 443:3001 --name sociopedia-server-container -e MONGO_URL='${{ secrets.MONGO_URL }}' fathismael93/sociopedia-server
